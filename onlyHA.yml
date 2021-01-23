@@ -1,0 +1,12 @@
+# Please rename this file to docker-compase.yml
+version: '3'
+services:
+  homeassistant:
+    container_name: home-assistant
+    image: homeassistant/home-assistant:stable
+    volumes:
+      - /PATH_TO_YOUR_CONFIG:/config
+    environment:
+      - TZ=Europe/Amsterdam
+    restart: always
+    network_mode: host
